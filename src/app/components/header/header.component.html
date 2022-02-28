@@ -1,0 +1,16 @@
+<ul class="navbar">
+  <div class="container nav">
+    <div class="navItems">
+      <li><a [routerLink]="['/']">
+      <img class="img"  src="../../../assets/images/ep.jpg" alt="">
+      </a></li>
+    </div>
+    <div class="navItems">
+      <li *ngIf="this.auth.isLoggedIn()"><a [routerLink]="['/add-job']">Shto shpalljen</a></li>
+      <li><a [routerLink]="['/']">Shpalljet</a></li>
+      <li *ngIf="this.auth.isLoggedIn()"><a [routerLink]="['/dashboard']">Menaxhimi</a></li>
+      <li *ngIf="!this.auth.isLoggedIn()"><a [routerLink]="['/login']">Kyçu</a></li>
+      <li *ngIf="this.auth.isLoggedIn()" (click)="logOut()"><a>Çkyçu</a></li>
+    </div>
+  </div>
+</ul>

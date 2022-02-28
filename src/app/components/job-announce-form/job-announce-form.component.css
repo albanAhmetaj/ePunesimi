@@ -1,0 +1,18 @@
+.add-job-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+.small-text {
+    color: orangered;
+}
+
+.butoni {
+    background-color: #7cadcf;
+}
+.butoni:hover {
+    background-color: #687A8f;
+}

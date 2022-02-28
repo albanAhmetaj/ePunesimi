@@ -1,0 +1,21 @@
+
+  .login-form-margin {
+    margin-bottom: 16px;
+  }
+  
+  .login-form-button {
+    width: 100%;
+  }
+  
+  .butoni {
+    background-color: #7cadcf;
+    border-color: none;
+  }
+
+  .butoni:hover {
+    background-color:  #687A8f;
+  }
+
+  .teksti {
+    color: rgb(22, 70, 182);
+  }

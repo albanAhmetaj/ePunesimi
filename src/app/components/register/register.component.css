@@ -1,0 +1,10 @@
+.butoni {
+    background-color: #7cadcf;
+}
+.butoni:hover {
+    background-color: #687A8f;
+}
+
+.teksti {
+    color: rgb(22, 70, 182);
+}

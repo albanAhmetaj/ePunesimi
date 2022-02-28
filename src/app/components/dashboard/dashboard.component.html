@@ -1,0 +1,35 @@
+<div class="container">
+  <div>
+    <nz-card
+      *ngFor="let post of posts"
+      nz-card-grid
+      [ngStyle]="gridStyle"
+      [nzCover]="coverTemplate"
+      [nzActions]="[actionEdit, actionDelete]"
+    >
+      <nz-card-meta
+        (click)="goToPost(post._id)"
+        nzTitle="{{ post.title }}"
+        nzDescription="{{ post.description }}"
+        [nzAvatar]="avatarTemplate"
+      ></nz-card-meta>
+      <ng-template #avatarTemplate>
+          <nz-avatar nzIcon="user"></nz-avatar>
+      </ng-template>
+  
+      <ng-template #coverTemplate>
+        <img
+          alt="example"
+          src="assets/images/ep.jpg"
+        />
+      </ng-template>
+      <ng-template #actionEdit>
+        <i nz-icon nzType="edit" (click)="editPost(post._id)"></i>
+      </ng-template>
+      <ng-template #actionDelete>
+        <i nz-icon nzType="delete" (click)="deleteJob(post._id)"></i>
+      </ng-template>
+    </nz-card>
+
+  </div>
+</div>

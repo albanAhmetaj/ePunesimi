@@ -1,0 +1,55 @@
+<div class="loginContainer">
+    <h1 class="text-center">Regjistrohuni</h1>
+    <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
+        <!-- First name -->
+      <nz-form-item>
+        <nz-form-control  nzErrorTip="Ju lutem shkruani Emrin tuaj!">
+          <nz-input-group nzPrefixIcon="user">
+            <input type="text" nz-input  formControlName="firstName" placeholder="First Name" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+        <!-- Last name -->
+        <nz-form-item>
+            <nz-form-control  nzErrorTip="Ju lutem shkruani Mbiemrin tuaj!">
+              <nz-input-group nzPrefixIcon="user">
+                <input type="text" nz-input  formControlName="lastName" placeholder="Last Name" />
+              </nz-input-group>
+            </nz-form-control>
+        </nz-form-item>
+        <!-- Email -->
+      <nz-form-item>
+        <nz-form-control  nzErrorTip="Ju lutem shkruani Email tuaj!">
+          <nz-input-group nzPrefixIcon="user">
+            <input type="email" nz-input  formControlName="email" placeholder="Email" />
+          </nz-input-group>
+        </nz-form-control>
+
+      </nz-form-item>
+     
+      <!-- Password -->
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Ju lutem shkruani Passwordin tuaj!">
+          <nz-input-group nzPrefixIcon="lock">
+            <input type="password" nz-input formControlName="password" placeholder="Password" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+      
+      <!-- Confirm Password  -->
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Ju lutem konfirmoni Passwordin tuaj!">
+          <nz-input-group nzPrefixIcon="lock">
+            <input type="password" nz-input formControlName="confirmPassword" placeholder="Confirm password" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+
+      <div nz-row class="login-form-margin">
+      </div>
+      <div class="text-center">
+        <button nz-button class="butoni login-form-button login-form-margin text-center" [nzType]="'primary'" >Regjistrohuni</button>
+        Ose <a [routerLink]="['/login']" class="teksti"> Kyçuni! </a>
+      </div>
+    </form>
+  </div>

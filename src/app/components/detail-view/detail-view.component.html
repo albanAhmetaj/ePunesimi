@@ -1,0 +1,79 @@
+<div class="container detail-container">
+  <div class="shpallja" *ngIf="post">
+    <!-- <h1>Post with id : {{ post.id }}</h1> -->
+    <h1>{{ post.title }}</h1>
+    <div class="shpallja-details">
+      <div class="shpallja-description">
+        <h3>{{ post.description }}</h3>
+        <hr>
+          <h3>Lokacioni: <span class="firstLetter" > {{ post.city }}</span>  </h3>
+      </div>
+    </div>
+  </div>
+  <div class="shpallja-form">
+    <h1>Apliko</h1>
+    <form
+      nz-form
+      [formGroup]="applyForm"
+      class="login-form"
+      (ngSubmit)="submitForm()"
+    >
+      <!-- Email -->
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Ju lutem shkruani Email tuaj!">
+          <nz-input-group nzPrefixIcon="user">
+            <input
+              type="email"
+              nz-input
+              formControlName="email"
+              placeholder="Email"
+            />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+      <!-- Phone number -->
+      <nz-form-item>
+        <nz-form-control
+          nzErrorTip="Ju lutem shkruani numrin tuaj te telefonit!"
+        >
+          <nz-input-group nzPrefixIcon="user">
+            <input
+              type="phone"
+              nz-input
+              formControlName="telNum"
+              placeholder="Numri i telefonit"
+            />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+      <label class="cv">Shtoni CV tuaj!</label>
+      <input
+        type="file"
+        id="attachment"
+        formControlName="attachment"
+        (change)="handleUpload($event)"
+      />
+
+      <div nz-row class="login-form-margin"></div>
+      <!-- Login button -->
+      <div class="text-center">
+        <button
+          nz-button
+          class="butoni login-form-button login-form-margin text-center"
+          [nzType]="'primary'"
+        >
+          Apliko
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+<ng-container *ngIf="authService.isLoggedIn() && allowApplications">
+  <div class="container" *ngIf="applications && applications.length">
+    <h1>Aplikuesit</h1>
+    <div *ngFor="let application of applications">
+      <li class="aplikimet"> {{application.email}} <a (click)="showFile(application.attachment)">{{application.attachment}}</a>
+       </li>
+    </div>
+  </div>
+</ng-container>

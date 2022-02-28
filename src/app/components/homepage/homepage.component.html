@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="cards">
+    <div class="card"  *ngFor="let post of posts" (click)="goToPost(post._id)">
+        <div class="cardImage">
+            <img src="assets/images/img_avatar.png" alt="">
+        </div>
+        <div>
+            <h3 class = "titulli" >{{ post.title }}</h3>
+            <p class="pershkrimi">{{ post.description }}</p>
+        </div>
+    </div>
+  </div>
+</div>

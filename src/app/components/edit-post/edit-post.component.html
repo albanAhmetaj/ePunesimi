@@ -1,0 +1,88 @@
+<div class="container">
+    <div class="add-job-container">
+      <h1>Forma e aplikimit</h1>
+      <form nz-form [formGroup]="job_announce" class="" (ngSubmit)="submitForm()">
+        <!-- Title -->
+        <nz-form-item>
+          <nz-form-label [nzSpan]="7" nzRequired>Titulli</nz-form-label>
+          <nz-form-control [nzSpan]="12" nzErrorTip="Sheno titullin!">
+            <nz-input-group>
+              <input
+                type="text"
+                nz-input
+                formControlName="title"
+                placeholder="Titulli"
+              />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+        <!-- State -->
+        <nz-form-item>
+          <nz-form-label [nzSpan]="7" nzRequired>Shteti</nz-form-label>
+          <nz-form-control [nzSpan]="12" nzErrorTip="">
+            <nz-input-group>
+              <input
+                type="text"
+                nz-input
+                formControlName="state"
+                value="Kosove"
+                [disabled]
+              />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+        <!-- City -->
+        <nz-form-item>
+          <nz-form-label [nzSpan]="7" nzFor="city" nzRequired>Qyteti</nz-form-label>
+          <nz-form-control [nzSpan]="12" nzErrorTip="Ju lutem zgjidhni qytetin tuaj!">
+            <nz-select
+              id="city"
+              formControlName="city"
+              nzPlaceHolder="Zgjidhni një qytet"
+            >
+              <nz-option nzValue="prishtine" nzLabel="Prishtinë"></nz-option>
+              <nz-option nzValue="mitrovice" nzLabel="Mitrovicë"></nz-option>
+              <nz-option nzValue="peje" nzLabel="Pejë"></nz-option>
+              <nz-option nzValue="prizren" nzLabel="Prizren"></nz-option>
+              <nz-option nzValue="ferizaj" nzLabel="Ferizaj"></nz-option>
+              <nz-option nzValue="gilan" nzLabel="Gjilan"></nz-option>
+              <nz-option nzValue="gjakove" nzLabel="Gjakovë"></nz-option>
+            </nz-select>
+          </nz-form-control>
+        </nz-form-item>
+        <!-- Desc -->
+        <nz-form-item>
+          <nz-form-label [nzSpan]="7" nzRequired>Koment: </nz-form-label>
+          <nz-form-control [nzSpan]="12" nzErrorTip="Ju lutem plotësoni këtë fushë!">
+            <textarea
+              formControlName="description"
+              nz-input
+              rows="4"
+              placeholder="Shkruani ndonjë gjë rreth vetvetes!"
+            ></textarea>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-label [nzSpan]="7" nzRequired></nz-form-label>
+          <nz-form-control [nzSpan]="12">
+            <small class = "small-text">
+              Fushat me * duhet te plotesohen per nje aplikim te sukseshem te shpalljes!
+            </small>
+          </nz-form-control>
+        </nz-form-item>
+  
+        <div nz-row class="login-form-margin"></div>
+        <!-- Button -->
+        <div class="text-center">
+          <button
+            nz-button
+            class="butoni login-form-button login-form-margin text-center"
+            [nzType]="'primary'"
+          >
+            Publiko shpalljen
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  

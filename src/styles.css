@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* utilities start */
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #fff;
+}
+
+ul {
+    list-style-type: none;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+}
+.text-center {
+    text-align: center;
+}
+
+.loginContainer {
+    width: 400px;
+    margin: 0 auto;
+}
+/* utilities end */

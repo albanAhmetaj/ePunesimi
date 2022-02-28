@@ -1,0 +1,44 @@
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    margin-top: 25px;
+}
+.card {
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-start;
+    width: 100%;
+    height: 250px;
+    background-color: #c2daeb;
+    box-shadow: -2px -2px 20px 1px rgba(33, 33, 211, 0.2);
+}
+
+.card:hover {
+    cursor: pointer;
+    background-color: #a4dbf3;;
+}
+
+.card .cardImage {
+    width: 20%;
+    
+}
+  
+.cardImage img {
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+h3 {
+   padding-top: 10px;
+   font-size: 1.5rem;
+   font-weight: 400;
+   text-transform: capitalize;
+}
+ 
+/* .pershkrimi {
+
+} */
